@@ -38,4 +38,32 @@
     echo $valor_ultrapassado . '<br>';
     var_dump($valor_ultrapassado); // float(9223372036854775808)
     echo '<br>';
-?>
+    
+    // podemos transformar variáveis fazendo 'cast' para inteiros
+
+    $valor_str = '145';
+    $valor_int = (int) $valor_str;
+    // ou
+    $valor_int_1 = (integer)$valor_str;
+
+    echo $valor_int . '<br>'; // 145  
+    echo $valor_int_1 . '<br>'; // 145
+
+    // conversôes de string para inteiros
+    echo (int) '100'; // 100
+    echo '<br>';
+    echo (int) '25teste'; // 100
+    echo '<br>';
+    echo (int) 'teste'; // 0
+
+    // podemos verificar se a variável é inteira
+    echo '<br>';
+
+    $final = 100;
+    var_dump(is_int($final)); // bool(true)
+
+    // e ainda podemos definir valores inteiros desta forma:
+    echo '<br>';
+    $outro_valor = 1_500_000;
+    echo $outro_valor; // 1500000
+    
